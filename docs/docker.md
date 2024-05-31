@@ -24,7 +24,7 @@ which stores the label in an associated .report file (Java properties file):
 docker run --rm -u $(id -u):$(id -g) \
     -v `pwd`:/workspace \
     -it waikatodatamining/audio-dataset-converter:latest \
-    idc-convert -l INFO \
+    adc-convert -l INFO \
       from-subdir-ac \
         -l INFO \
         -i /workspace/input/ \

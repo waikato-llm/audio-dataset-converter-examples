@@ -9,7 +9,7 @@ Download the [Iris Living Audio Dataset](https://datasets.cms.waikato.ac.nz/ufdl
 The following converts the Festvoc dataset into ADAMS format, storing the transcript in the `transcript` field:
 
 ```bash
-idc-convert \
+adc-convert \
   -l INFO \
   from-festvox-sp \
     -l INFO \
@@ -26,7 +26,7 @@ You can also split the data, e.g., into train, validation and test subsets.
 The following converts the Festvox into ADAMS format:
 
 ```bash
-idc-convert \
+adc-convert \
   -l INFO \
   from-festvox-sp \
     -l INFO \
