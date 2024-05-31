@@ -429,7 +429,7 @@ custom Python functions:</p>
 <li>writer: <code>my.code:pyfunc_writer</code></li>
 </ul>
 <pre><code class="language-python">from typing import Iterable
-from idc.api import AudioClassificationData, make_list, flatten_list
+from adc.api import AudioClassificationData, make_list, flatten_list
 
 # reader: generates audio classification containers from the path   
 def pyfunc_reader(path: str) -&gt; Iterable[AudioClassificationData]:
