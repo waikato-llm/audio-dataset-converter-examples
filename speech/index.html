@@ -505,7 +505,7 @@
 <h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
 <h3 id="festvox-to-adams">Festvox to ADAMS<a class="headerlink" href="#festvox-to-adams" title="Permanent link">#</a></h3>
 <p>The following converts the Festvoc dataset into ADAMS format, storing the transcript in the <code>transcript</code> field:</p>
-<pre><code class="language-bash">idc-convert \
+<pre><code class="language-bash">adc-convert \
   -l INFO \
   from-festvox-sp \
     -l INFO \
@@ -518,7 +518,7 @@
 <h3 id="festvox-to-adams-trainvaltest-splits">Festvox to ADAMS (train/val/test splits)<a class="headerlink" href="#festvox-to-adams-trainvaltest-splits" title="Permanent link">#</a></h3>
 <p>You can also split the data, e.g., into train, validation and test subsets.
 The following converts the Festvox into ADAMS format:</p>
-<pre><code class="language-bash">idc-convert \
+<pre><code class="language-bash">adc-convert \
   -l INFO \
   from-festvox-sp \
     -l INFO \

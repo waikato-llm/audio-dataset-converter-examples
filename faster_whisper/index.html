@@ -397,6 +397,19 @@
     Plugins
   </a>
   
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcribing-audio" class="md-nav__link">
+    Transcribing audio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -450,6 +463,19 @@
     Plugins
   </a>
   
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcribing-audio" class="md-nav__link">
+    Transcribing audio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -477,7 +503,22 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
 <p>Requires the <a href="https://github.com/waikato-datamining/audio-dataset-converter-faster-whisper">audio-dataset-converter-faster-whisper</a> library.</p>
 <h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
-<p>TODO</p>
+<h3 id="transcribing-audio">Transcribing audio<a class="headerlink" href="#transcribing-audio" title="Permanent link">#</a></h3>
+<p>The following commands loads raw audio files (i.e., ones without a transcript) and
+applies the <code>fw-transcribe</code> filter to generate a transcript using faster-whisper,
+with the result then stored in Festvox format:</p>
+<pre><code class="language-bash">adc-convert \
+  -l INFO \
+    from-data \
+      -l INFO \
+      -i &quot;./raw/*.wav&quot; \
+      -t sp \
+    fw-transcribe \
+      -l INFO \
+    to-festvox-sp \
+      -l INFO \
+      -o ./festvox
+</code></pre>
 
 
 
