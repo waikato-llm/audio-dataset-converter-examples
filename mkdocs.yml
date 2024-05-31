@@ -1,0 +1,24 @@
+site_name: audio-dataset-converter examples
+site_url: https://www.data-mining.co.nz/audio-dataset-converter-examples/
+repo_url: https://github.com/waikato-datamining/audio-dataset-converter-examples
+edit_uri: edit/master/docs/
+site_description: Examples for using the audio-dataset-converter libraries
+theme:
+    name: material
+markdown_extensions:
+    - toc:
+          baselevel: 2
+          permalink: "#"
+    - attr_list
+plugins:
+    - search
+nav:
+    - Home: index.md
+    - Core library:
+        - Audio classification: audio_classification.md
+        - Speech: speech.md
+        - Filter usage: filters.md
+        - Docker usage: docker.md
+        - External functions: pyfunc.md
+    - Additional libraries:
+        - Faster whisper: faster_whisper.md
