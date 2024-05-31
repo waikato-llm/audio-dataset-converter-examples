@@ -6,6 +6,11 @@ The following sections only show snippets of commands, as there are quite a numb
 * `strip-annotations` - removes all annotations
 
 
+## Audio management
+
+* `to-mono` - ensures that audio data is mono
+
+
 ## Meta-data management
 
 * `metadata` - allows comparisons on meta-data values and whether to keep or discard a record in case of a match
