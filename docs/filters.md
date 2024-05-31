@@ -8,7 +8,8 @@ The following sections only show snippets of commands, as there are quite a numb
 
 ## Audio management
 
-* `to-mono` - ensures that audio data is mono
+* `convert-to-mono` - ensures that audio data is mono
+* `convert-to-wav` - ensures that audio data is in WAV format
 
 
 ## Meta-data management
