@@ -21,7 +21,7 @@ If the code below were available through module `my.code`, then the function spe
 
 ```python
 from typing import Iterable
-from idc.api import AudioClassificationData, make_list, flatten_list
+from adc.api import AudioClassificationData, make_list, flatten_list
 
 # reader: generates audio classification containers from the path   
 def pyfunc_reader(path: str) -> Iterable[AudioClassificationData]:
