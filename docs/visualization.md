@@ -4,4 +4,5 @@ Requires the [audio-dataset-converter-visualization](https://github.com/waikato-
 
 # Plugins
 
-TODO
+* `to-mel-spectrogram` - outputs Mel spectrogram images
+* `to-stft-spectrogram` - outputs short time fourier transform (STFT) spectrogram images
