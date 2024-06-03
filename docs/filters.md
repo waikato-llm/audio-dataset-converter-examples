@@ -10,6 +10,13 @@ The following sections only show snippets of commands, as there are quite a numb
 
 * `convert-to-mono` - ensures that audio data is mono
 * `convert-to-wav` - ensures that audio data is in WAV format
+* `trim-silence` - for removing chunks of silence
+
+
+## Augmentation
+
+* `pitch-shift` - for shifting the pitch of audio samples
+* `time-stretch` - for speeding up/slowing down samples
 
 
 ## Meta-data management
