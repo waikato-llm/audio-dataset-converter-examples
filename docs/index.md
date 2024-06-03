@@ -21,3 +21,4 @@ On this website you can find examples for:
 Examples for the additional libraries:
 
 * [Faster whisper](faster_whisper.md)
+* [Visualization](visualization.md)

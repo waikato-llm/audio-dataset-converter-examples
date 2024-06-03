@@ -22,3 +22,4 @@ nav:
         - External functions: pyfunc.md
     - Additional libraries:
         - Faster whisper: faster_whisper.md
+        - Visualization: visualization.md
