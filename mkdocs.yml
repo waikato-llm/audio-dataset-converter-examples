@@ -22,4 +22,5 @@ nav:
         - External functions: pyfunc.md
     - Additional libraries:
         - Faster whisper: faster_whisper.md
+        - Redis: redis.md
         - Visualization: visualization.md
