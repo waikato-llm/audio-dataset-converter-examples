@@ -8,7 +8,7 @@ Requires the [audio-dataset-converter-faster-whisper](https://github.com/waikato
 
 The following commands loads raw audio files (i.e., ones without a transcript) and
 applies the `fw-transcribe` filter to generate a transcript using faster-whisper,
-with the result then stored in Festvox format:
+with the result then being stored in Festvox format:
 
 ```bash
 adc-convert \
