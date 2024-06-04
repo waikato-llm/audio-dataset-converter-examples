@@ -411,6 +411,33 @@
     Plugins
   </a>
   
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mel-spectrogram" class="md-nav__link">
+    Mel spectrogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfcc-spectrogram" class="md-nav__link">
+    MFCC spectrogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stft-spectrogram" class="md-nav__link">
+    STFT spectrogram
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -464,6 +491,33 @@
     Plugins
   </a>
   
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mel-spectrogram" class="md-nav__link">
+    Mel spectrogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfcc-spectrogram" class="md-nav__link">
+    MFCC spectrogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stft-spectrogram" class="md-nav__link">
+    STFT spectrogram
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -491,11 +545,46 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
 <p>Requires the <a href="https://github.com/waikato-datamining/audio-dataset-converter-visualization">audio-dataset-converter-visualization</a> library.</p>
 <h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
-<ul>
-<li><code>to-mel-spectrogram</code> - outputs Mel spectrogram images</li>
-<li><code>to-mfcc-spectrogram</code> - outputs Mel-frequency cepstral coefficients images</li>
-<li><code>to-stft-spectrogram</code> - outputs short time fourier transform (STFT) spectrogram images</li>
-</ul>
+<p>For the following examples, data from the <a href="https://keithito.com/LJ-Speech-Dataset/">LJ Speech Dataset</a> was used.</p>
+<h3 id="mel-spectrogram">Mel spectrogram<a class="headerlink" href="#mel-spectrogram" title="Permanent link">#</a></h3>
+<p><code>to-mel-spectrogram</code> - outputs Mel spectrogram images</p>
+<pre><code class="language-bash">adc-convert \
+  -l INFO \
+    from-data \
+      -l INFO \
+      -i &quot;./input/*.wav&quot; \
+      -t sp \
+    to-mel-spectrogram \
+      -l INFO \
+      -o ./output
+</code></pre>
+<p><img alt="Mel spectrogram example plot" src="../img/LJ001-0001-mel.png" /></p>
+<h3 id="mfcc-spectrogram">MFCC spectrogram<a class="headerlink" href="#mfcc-spectrogram" title="Permanent link">#</a></h3>
+<p><code>to-mfcc-spectrogram</code> - outputs Mel-frequency cepstral coefficients images</p>
+<pre><code class="language-bash">adc-convert \
+  -l INFO \
+    from-data \
+      -l INFO \
+      -i &quot;./input/*.wav&quot; \
+      -t sp \
+    to-mfcc-spectrogram \
+      -l INFO \
+      -o ./output
+</code></pre>
+<p><img alt="MFCC spectrogram example plot" src="../img/LJ001-0001-mfcc.png" /></p>
+<h3 id="stft-spectrogram">STFT spectrogram<a class="headerlink" href="#stft-spectrogram" title="Permanent link">#</a></h3>
+<p><code>to-stft-spectrogram</code> - outputs short time fourier transform (STFT) spectrogram images</p>
+<pre><code class="language-bash">adc-convert \
+  -l INFO \
+    from-data \
+      -l INFO \
+      -i &quot;./input/*.wav&quot; \
+      -t sp \
+    to-stft-spectrogram \
+      -l INFO \
+      -o ./output
+</code></pre>
+<p><img alt="STFT spectrogram example plot" src="../img/LJ001-0001-stft.png" /></p>
 
 
 
