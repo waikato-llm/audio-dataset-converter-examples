@@ -1,6 +1,6 @@
 # Requirements
 
-Requires the [audio-dataset-converter-redis](https://github.com/waikato-datamining/audio-dataset-converter-redis) library.
+Requires the [audio-dataset-converter-redis](https://github.com/waikato-llm/audio-dataset-converter-redis) library.
 
 # Plugins
 

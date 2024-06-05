@@ -1,5 +1,5 @@
 Below are examples for using the audio-dataset-converter library via its 
-[Docker images](https://github.com/waikato-datamining/audio-dataset-converter-all/tree/main/docker).
+[Docker images](https://github.com/waikato-llm/audio-dataset-converter-all/tree/main/docker).
 
 
 # Interactive session
@@ -17,7 +17,7 @@ docker run --rm -u $(id -u):$(id -g) \
 
 The following converts an audio classification dataset from the sub-dir format
 (sub-directory names represent the audio classification labels) into the 
-[ADAMS format](https://github.com/waikato-datamining/audio-dataset-converter/blob/main/formats/adams.md), 
+[ADAMS format](https://github.com/waikato-llm/audio-dataset-converter/blob/main/formats/adams.md), 
 which stores the label in an associated .report file (Java properties file):
 
 ```bash

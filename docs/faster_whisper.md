@@ -1,6 +1,6 @@
 # Requirements
 
-Requires the [audio-dataset-converter-faster-whisper](https://github.com/waikato-datamining/audio-dataset-converter-faster-whisper) library.
+Requires the [audio-dataset-converter-faster-whisper](https://github.com/waikato-llm/audio-dataset-converter-faster-whisper) library.
 
 # Plugins
 

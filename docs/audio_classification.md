@@ -6,7 +6,7 @@ Readers and writers for audio classification have the `-ac` suffix.
 
 The following converts an audio classification dataset from the sub-dir format
 (sub-directory names represent the audio classification labels) into the 
-[ADAMS format](https://github.com/waikato-datamining/audio-dataset-converter/blob/main/formats/adams.md), 
+[ADAMS format](https://github.com/waikato-llm/audio-dataset-converter/blob/main/formats/adams.md), 
 which stores the label in an associated .report file (Java properties file):
 
 ```bash

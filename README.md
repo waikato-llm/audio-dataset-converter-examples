@@ -1,5 +1,5 @@
 # audio-dataset-converter-examples
-Examples for the [audio-dataset-converter](https://github.com/waikato-datamining/audio-dataset-converter) libraries:
+Examples for the [audio-dataset-converter](https://github.com/waikato-llm/audio-dataset-converter) libraries:
 
 https://waikato-llm.github.io/audio-dataset-converter-examples/
 
