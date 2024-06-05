@@ -108,5 +108,4 @@ venv.bak/
 *.bak
 .idea/
 *.iml
-blah*.py
 test/
