@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/audio_classification/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/audio_classification/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/docker/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/docker/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/faster_whisper/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/faster_whisper/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/filters/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/filters/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/pyfunc/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/pyfunc/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/redis/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/redis/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/speech/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/speech/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data-mining.co.nz/audio-dataset-converter-examples/visualization/</loc>
-         <lastmod>2024-06-04</lastmod>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/visualization/</loc>
+         <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
