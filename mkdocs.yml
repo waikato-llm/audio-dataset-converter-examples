@@ -1,6 +1,6 @@
 site_name: audio-dataset-converter examples
-site_url: https://www.data-mining.co.nz/audio-dataset-converter-examples/
-repo_url: https://github.com/waikato-datamining/audio-dataset-converter-examples
+site_url: https://waikato-llm.github.io/audio-dataset-converter-examples/
+repo_url: https://github.com/waikato-llm/audio-dataset-converter-examples
 edit_uri: edit/master/docs/
 site_description: Examples for using the audio-dataset-converter libraries
 theme:
