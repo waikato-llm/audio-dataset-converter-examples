@@ -412,6 +412,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-srt-subtitles" class="md-nav__link">
+    Generate SRT subtitles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -506,6 +526,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-srt-subtitles" class="md-nav__link">
+    Generate SRT subtitles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -546,6 +586,21 @@ with the result then being stored in Festvox format:</p>
     to-festvox-sp \
       -l INFO \
       -o ./festvox
+</code></pre>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h2>
+<h3 id="generate-srt-subtitles">Generate SRT subtitles<a class="headerlink" href="#generate-srt-subtitles" title="Permanent link">#</a></h3>
+<p>The <code>adc-srt</code> allows generating subtitles in <a href="https://docs.fileformat.com/video/srt/">SRT format</a> from audio
+and video files.</p>
+<p>The following example generates subtitle files for all <code>.mp4</code> file, alongside the video files:</p>
+<pre><code class="language-bash">adc-srt \
+  -l INFO \
+  -i ./input/*.mp4
+</code></pre>
+<p>In this example, the <code>.srt</code> files generated from <code>.wav</code> files get placed in a separate output directory:</p>
+<pre><code class="language-bash">adc-srt \
+  -l INFO \
+  -i ./input/*.wav \
+  -o ./output
 </code></pre>
 
 
