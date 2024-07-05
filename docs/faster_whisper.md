@@ -23,3 +23,28 @@ adc-convert \
       -l INFO \
       -o ./festvox
 ```
+
+
+# Tools
+
+## Generate SRT subtitles
+
+The `adc-srt` allows generating subtitles in [SRT format](https://docs.fileformat.com/video/srt/) from audio
+and video files.
+
+The following example generates subtitle files for all `.mp4` file, alongside the video files:
+
+```bash
+adc-srt \
+  -l INFO \
+  -i ./input/*.mp4
+```
+
+In this example, the `.srt` files generated from `.wav` files get placed in a separate output directory:
+
+```bash
+adc-srt \
+  -l INFO \
+  -i ./input/*.wav \
+  -o ./output
+```
