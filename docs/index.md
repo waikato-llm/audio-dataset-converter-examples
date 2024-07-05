@@ -1,5 +1,5 @@
 The [audio-dataset-converter](https://github.com/waikato-llm/audio-dataset-converter) 
-library (and its dependent libraries) can be used for converting datasets from one format 
+library (and its dependent libraries) can be used for converting **audio datasets** from one format 
 into another. It has I/O support for the following domains:
 
 * Audio classification
