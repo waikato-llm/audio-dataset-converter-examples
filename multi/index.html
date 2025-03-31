@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://waikato-llm.github.io/audio-dataset-converter-examples/faster_whisper/">
+        <link rel="canonical" href="https://waikato-llm.github.io/audio-dataset-converter-examples/multi/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Faster whisper - audio-dataset-converter examples</title>
+        <title>Multiple I/O - audio-dataset-converter examples</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#multiple-inputs" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Faster whisper
+              Multiple I/O
             
           </span>
         </div>
@@ -222,12 +222,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -318,11 +320,68 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../multi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Multiple I/O
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Multiple I/O
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-inputs" class="md-nav__link">
+    Multiple inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-outputs" class="md-nav__link">
+    Multiple outputs
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -340,14 +399,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -368,88 +425,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Faster whisper
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../faster_whisper/" class="md-nav__link">
         Faster whisper
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    Plugins
-  </a>
-  
-    <nav class="md-nav" aria-label="Plugins">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#transcribing-audio" class="md-nav__link">
-    Transcribing audio
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-srt-subtitles" class="md-nav__link">
-    Generate SRT subtitles
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -514,43 +494,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
+  <a href="#multiple-inputs" class="md-nav__link">
+    Multiple inputs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    Plugins
+  <a href="#multiple-outputs" class="md-nav__link">
+    Multiple outputs
   </a>
   
-    <nav class="md-nav" aria-label="Plugins">
+    <nav class="md-nav" aria-label="Multiple outputs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#transcribing-audio" class="md-nav__link">
-    Transcribing audio
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-srt-subtitles" class="md-nav__link">
-    Generate SRT subtitles
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
   </a>
   
 </li>
@@ -574,47 +534,68 @@
                 
                   
 
-  <a href="https://github.com/waikato-llm/audio-dataset-converter-examples/edit/master/docs/faster_whisper.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/waikato-llm/audio-dataset-converter-examples/edit/master/docs/multi.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Faster whisper</h1>
+  <h1>Multiple I/O</h1>
 
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
-<p>Requires the <a href="https://github.com/waikato-llm/audio-dataset-converter-faster-whisper">audio-dataset-converter-faster-whisper</a> library.</p>
-<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
-<h3 id="transcribing-audio">Transcribing audio<a class="headerlink" href="#transcribing-audio" title="Permanent link">#</a></h3>
-<p>The following commands loads raw audio files (i.e., ones without a transcript) and
-applies the <code>fw-transcribe</code> filter to generate a transcript using faster-whisper,
-with the result then being stored in Festvox format:</p>
+<p>Most of the time, conversion pipelines will only need to read from one
+source and output to a single target. However, there can be cases where
+datasets of different types need merging (<em>multiple inputs</em>) or datasets
+of different types need to generated for different frameworks (<em>multiple outputs</em>).</p>
+<p>To cater for these scenarios, the following two meta plugins are available:</p>
+<ul>
+<li><code>from-multi</code> - reads from one or more sources using the specified readers</li>
+<li><code>to-multi</code> - forwards the incoming data to one or more writers</li>
+</ul>
+<p>There is one restriction, each of the base reader/writer must be from the
+same data domain.</p>
+<h2 id="multiple-inputs">Multiple inputs<a class="headerlink" href="#multiple-inputs" title="Permanent link">#</a></h2>
+<p>The following command reads a dataset in Festvox 
+and ADAMS format, with the combined output being saved in CommonVoice format:</p>
 <pre><code class="language-bash">adc-convert \
   -l INFO \
-    from-data \
-      -l INFO \
-      -i &quot;./raw/*.wav&quot; \
-      -t sp \
-    fw-transcribe \
-      -l INFO \
-    to-festvox-sp \
-      -l INFO \
-      -o ./festvox
+  from-multi \
+    -l INFO \
+    -t sp \
+    -r &quot;from-festvox-sp -l INFO -i {CWD}/input/*.txt&quot; \
+       &quot;from-adams-sp -l INFO -i {CWD}/input/*.report -t transcript&quot; \
+  to-commonvoice-sp \
+    -l INFO \
+    -o &quot;{CWD}/output&quot;
 </code></pre>
-<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h2>
-<h3 id="generate-srt-subtitles">Generate SRT subtitles<a class="headerlink" href="#generate-srt-subtitles" title="Permanent link">#</a></h3>
-<p>The <code>adc-srt</code> allows generating subtitles in <a href="https://docs.fileformat.com/video/srt/">SRT format</a> from audio
-and video files.</p>
-<p>The following example generates subtitle files for all <code>.mp4</code> file, alongside the video files:</p>
-<pre><code class="language-bash">adc-srt \
+<h2 id="multiple-outputs">Multiple outputs<a class="headerlink" href="#multiple-outputs" title="Permanent link">#</a></h2>
+<p>Below, the source data is in ADAMS speech format and will be
+converted to Festvox and CommonVoice format:</p>
+<pre><code class="language-bash">adc-convert \
   -l INFO \
-  -i ./input/*.mp4
+  from-adams-sp \
+    -l INFO \
+    -i &quot;{CWD}/input/*.report&quot; \
+  to-multi \
+    -l INFO \
+    -t sp \
+    -w &quot;to-festvox-sp -l INFO -o {CWD}/output/festvox&quot; \
+       &quot;to-commonvoice-sp -l INFO -o {CWD}/output/commonvoice&quot;
 </code></pre>
-<p>In this example, the <code>.srt</code> files generated from <code>.wav</code> files get placed in a separate output directory:</p>
-<pre><code class="language-bash">adc-srt \
+<h3 id="sub-pipelines">Sub-pipelines<a class="headerlink" href="#sub-pipelines" title="Permanent link">#</a></h3>
+<p>With the <code>tee</code> meta-filter, it is possible to filter the audio files coming through with a separate
+sub-pipeline. E.g., converting the incoming data into multiple output formats with their own
+preprocessing.</p>
+<p>The following command loads the Festvox speech data and saves them in ADAMS and split 
+ADAMS format (after trimming silences) in one command:</p>
+<pre><code class="language-bash">adc-convert \
   -l INFO \
-  -i ./input/*.wav \
-  -o ./output
+  from-festvox-sp \
+    -l INFO \
+    -i &quot;./festvox/*.txt&quot; \
+  tee \
+    -f &quot;to-adams-sp -o ./adams-tee/ -t transcript&quot; \
+  tee \
+    -f &quot;trim-silence to-adams-sp -o ./adams-split-tee/ -t transcript --split_names train val test --split_ratios 70 15 15&quot;
 </code></pre>
 
 
@@ -636,7 +617,7 @@ and video files.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../multi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multiple I/O" rel="prev">
+        <a href="../pyfunc/" class="md-footer__link md-footer__link--prev" aria-label="Previous: External functions" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -645,20 +626,20 @@ and video files.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Multiple I/O
+              External functions
             </div>
           </div>
         </a>
       
       
         
-        <a href="../redis/" class="md-footer__link md-footer__link--next" aria-label="Next: Redis" rel="next">
+        <a href="../faster_whisper/" class="md-footer__link md-footer__link--next" aria-label="Next: Faster whisper" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Redis
+              Faster whisper
             </div>
           </div>
           <div class="md-footer__button md-icon">

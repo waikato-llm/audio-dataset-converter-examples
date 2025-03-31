@@ -373,6 +373,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi/" class="md-nav__link">
+        Multiple I/O
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -541,7 +555,7 @@
   to-adams-sp \
     -l INFO \
     -o ./adams \
-    -c transcript
+    -t transcript
 </code></pre>
 <h3 id="festvox-to-adams-trainvaltest-splits">Festvox to ADAMS (train/val/test splits)<a class="headerlink" href="#festvox-to-adams-trainvaltest-splits" title="Permanent link">#</a></h3>
 <p>You can also split the data, e.g., into train, validation and test subsets.
@@ -554,7 +568,7 @@ The following converts the Festvox into ADAMS format:</p>
   to-adams-sp \
     -l INFO \
     -o ./adams-split \
-    -c transcript \
+    -t transcript \
     --split_names train val test \
     --split_ratios 70 15 15
 </code></pre>
