@@ -37,23 +37,3 @@ A number of generic record management filters are available:
 * `record-window` - only lets a certain window of records pass through (e.g., the first 1000)
 * `rename` - allows renaming of audio files, e.g., prefixing them with a batch number/ID
 * `sample` - for selecting a random sub-sample from the stream
-
-
-## Sub-pipelines
-
-With the `tee` meta-filter, it is possible to filter the audio files coming through with a separate
-sub-pipeline. E.g., converting the incoming data into multiple output formats.
-
-The following command loads the Festvox speech data and saves them in ADAMS and split ADAMS format in one command:
-
-```bash
-adc-convert \
-  -l INFO \
-  from-festvox-sp \
-    -l INFO \
-    -i "./festvox/*.txt" \
-  tee \
-    -f "to-adams-sp -o ./adams-tee/ -c transcript" \
-  tee \
-    -f "to-adams-sp -o ./adams-split-tee/ -c transcript --split_names train val test --split_ratios 70 15 15"
-```

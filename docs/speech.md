@@ -17,7 +17,7 @@ adc-convert \
   to-adams-sp \
     -l INFO \
     -o ./adams \
-    -c transcript
+    -t transcript
 ```
 
 ## Festvox to ADAMS (train/val/test splits)
@@ -34,7 +34,7 @@ adc-convert \
   to-adams-sp \
     -l INFO \
     -o ./adams-split \
-    -c transcript \
+    -t transcript \
     --split_names train val test \
     --split_ratios 70 15 15
 ```
