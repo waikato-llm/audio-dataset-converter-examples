@@ -359,6 +359,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../placeholders/" class="md-nav__link">
+        Placeholders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../docker/" class="md-nav__link">
         Docker usage
       </a>
@@ -569,6 +583,18 @@
 <li><code>convert-to-wav</code> - ensures that audio data is in WAV format</li>
 <li><code>trim-silence</code> - for removing chunks of silence</li>
 </ul>
+<p>Trimming the silence:</p>
+<pre><code class="language-bash">adc-convert -l INFO \
+  from-data \
+    -l INFO \
+    -t sp \
+    -i &quot;./input/*.wav&quot; \
+  trim-silence \
+    -l INFO \
+  to-data \
+    -l INFO \
+    -o ./output
+</code></pre>
 <h3 id="augmentation">Augmentation<a class="headerlink" href="#augmentation" title="Permanent link">#</a></h3>
 <ul>
 <li><code>pitch-shift</code> - for shifting the pitch of audio samples</li>
@@ -580,6 +606,20 @@
 <li><code>metadata-from-name</code> - allows extraction of meta-data value from the audio file name via a regular expression</li>
 <li><code>split-records</code> - adds the field <code>split</code> to the meta-data of the record passing through, which can be acted on with other filters (or stored in the output)</li>
 </ul>
+<p>Splitting records into train/test using a 50/50 split ratio:</p>
+<pre><code class="language-bash">sdc-convert -l INFO -b \
+  from-data \
+    -l INFO \
+    -t sp \
+    -i &quot;./input/*.wav&quot; \
+  split-records \
+    --split_names train test \
+    --split_ratios 50 50 \
+  set-placeholder
+  to-data \
+    -l INFO \
+    -o ./output
+</code></pre>
 <h3 id="record-management">Record management<a class="headerlink" href="#record-management" title="Permanent link">#</a></h3>
 <p>A number of generic record management filters are available:</p>
 <ul>
@@ -592,6 +632,18 @@
 <li><code>rename</code> - allows renaming of audio files, e.g., prefixing them with a batch number/ID</li>
 <li><code>sample</code> - for selecting a random sub-sample from the stream</li>
 </ul>
+<p>Discarding files by name:</p>
+<pre><code class="language-bash">adc-convert -l INFO \
+  from-subdir-ac \
+    -l INFO \
+    -i ./input/ \
+  discard-by-name \
+    -l INFO \
+    -r &quot;jvm_00027.*&quot; \
+  to-subdir-ac \
+    -l INFO \
+    -o ./output
+</code></pre>
 
 
 
@@ -628,13 +680,13 @@
       
       
         
-        <a href="../docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker usage" rel="next">
+        <a href="../placeholders/" class="md-footer__link md-footer__link--next" aria-label="Next: Placeholders" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Docker usage
+              Placeholders
             </div>
           </div>
           <div class="md-footer__button md-icon">
