@@ -12,6 +12,20 @@ The following sections only show snippets of commands, as there are quite a numb
 * `convert-to-wav` - ensures that audio data is in WAV format
 * `trim-silence` - for removing chunks of silence
 
+Trimming the silence:
+
+```bash
+adc-convert -l INFO \
+  from-data \
+    -l INFO \
+    -t sp \
+    -i "./input/*.wav" \
+  trim-silence \
+    -l INFO \
+  to-data \
+    -l INFO \
+    -o ./output
+```
 
 ## Augmentation
 
@@ -26,6 +40,24 @@ The following sections only show snippets of commands, as there are quite a numb
 * `split-records` - adds the field `split` to the meta-data of the record passing through, which can be acted on with other filters (or stored in the output)
 
 
+Splitting records into train/test using a 50/50 split ratio:
+
+```bash
+sdc-convert -l INFO -b \
+  from-data \
+    -l INFO \
+    -t sp \
+    -i "./input/*.wav" \
+  split-records \
+    --split_names train test \
+    --split_ratios 50 50 \
+  set-placeholder
+  to-data \
+    -l INFO \
+    -o ./output
+```
+
+
 ## Record management
 
 A number of generic record management filters are available:
@@ -38,3 +70,18 @@ A number of generic record management filters are available:
 * `record-window` - only lets a certain window of records pass through (e.g., the first 1000)
 * `rename` - allows renaming of audio files, e.g., prefixing them with a batch number/ID
 * `sample` - for selecting a random sub-sample from the stream
+
+Discarding files by name:
+
+```bash
+adc-convert -l INFO \
+  from-subdir-ac \
+    -l INFO \
+    -i ./input/ \
+  discard-by-name \
+    -l INFO \
+    -r "jvm_00027.*" \
+  to-subdir-ac \
+    -l INFO \
+    -o ./output
+```
