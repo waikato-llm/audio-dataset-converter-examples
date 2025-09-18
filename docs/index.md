@@ -11,11 +11,18 @@ section for more details on supported formats.
 But the library does not just convert datasets, you can also slot in complex filter pipelines to 
 process/clean the data.
 
-On this website you can find examples for:
+On this website you can find examples and documentation for:
 
 * [Audio classification](audio_classification.md)
 * [Speech](speech.md)
 * [Filter usage](filters.md)
+* [Placeholders](placeholders.md)
+* [Execution control](execution_control.md)
+* [External functions](pyfunc.md)
+* [Multiple I/O](multi.md)
+* [Email](email.md)
+* [File handling](file_handling.md)
+* [Temporary storage](storage.md)
 * [Docker usage](docker.md)
 
 Examples for the additional libraries:

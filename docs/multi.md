@@ -47,25 +47,3 @@ adc-convert \
     -w "to-festvox-sp -l INFO -o {CWD}/output/festvox" \
        "to-commonvoice-sp -l INFO -o {CWD}/output/commonvoice"
 ```
-
-
-## Sub-pipelines
-
-With the `tee` meta-filter, it is possible to filter the audio files coming through with a separate
-sub-pipeline. E.g., converting the incoming data into multiple output formats with their own
-preprocessing.
-
-The following command loads the Festvox speech data and saves them in ADAMS and split 
-ADAMS format (after trimming silences) in one command:
-
-```bash
-adc-convert \
-  -l INFO \
-  from-festvox-sp \
-    -l INFO \
-    -i "./festvox/*.txt" \
-  tee \
-    -f "to-adams-sp -o ./adams-tee/ -t transcript" \
-  tee \
-    -f "trim-silence to-adams-sp -o ./adams-split-tee/ -t transcript --split_names train val test --split_ratios 70 15 15"
-```
