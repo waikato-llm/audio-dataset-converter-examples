@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://waikato-llm.github.io/audio-dataset-converter-examples/pyfunc/">
+        <link rel="canonical" href="https://waikato-llm.github.io/audio-dataset-converter-examples/execution_control/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>External functions - audio-dataset-converter examples</title>
+        <title>Execution control - audio-dataset-converter examples</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sub-pipelines" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              External functions
+              Execution control
             
           </span>
         </div>
@@ -301,20 +306,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../execution_control/" class="md-nav__link">
-        Execution control
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -324,10 +315,53 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Execution control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        External functions
+        Execution control
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyfunc/" class="md-nav__link">
+        External functions
+      </a>
     </li>
   
 
@@ -503,6 +537,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -515,57 +564,39 @@
                 
                   
 
-  <a href="https://github.com/waikato-llm/audio-dataset-converter-examples/edit/master/docs/pyfunc.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/waikato-llm/audio-dataset-converter-examples/edit/master/docs/execution_control.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>External functions</h1>
+  <h1>Execution control</h1>
 
-<p>No library can dream of offering all the required functionality. Especially for one-off tasks, it makes no sense to 
-develop a whole new plugin library. Hence, there are the following generic plugins that allow the user to utilize 
-custom Python functions:</p>
+<p>The following filters can be used for controlling the execution of the
+pipeline:</p>
 <ul>
-<li>reader: <code>from-pyfunc</code> - takes a single string as input and outputs an iterable of audio containers (as per specified data type)</li>
-<li>filter: <code>pyfunc-filter</code> - takes a single audio container or an iterable of them as input and outputs a single container or an iterable of them (as per specified input and output data types)</li>
-<li>writer: <code>to-pyfunc</code> - processes a single audio container or an iterable of them as per specified data type and an optional split name</li>
+<li><code>block</code> - blocks data passing through based on a condition applied to the meta-data</li>
+<li><code>list-to-sequence</code> - forwards the elements of lists individually</li>
+<li><code>stop</code> - stops the pipeline if the meta-data-based condition holds true</li>
+<li><code>sub-process</code> - meta-data condition determines execution of sub-filter(s)</li>
+<li><code>tee</code> - meta-data condition determines forking off of data to the sub-pipeline (filter(s), [writer])</li>
+<li><code>trigger</code> - meta-data condition determines execution of the sub-pipeline (reader, [filter(s)], [writer])</li>
 </ul>
-<p>In order to use such a custom function, they must be specified in the following format (option: <code>-f/--function</code>):</p>
-<pre><code>module_name:function_name
-</code></pre>
-<p>If the code below were available through module <code>my.code</code>, then the function specifications would be as follows:</p>
-<ul>
-<li>reader: <code>my.code:pyfunc_reader</code></li>
-<li>filter: <code>my.code:pyfunc_filter</code></li>
-<li>writer: <code>my.code:pyfunc_writer</code></li>
-</ul>
-<pre><code class="language-python">from typing import Iterable
-from adc.api import AudioClassificationData, make_list, flatten_list
-
-# reader: generates audio classification containers from the path   
-def pyfunc_reader(path: str) -&gt; Iterable[AudioClassificationData]:
-    return [AudioClassificationData(source=path)]
-
-# filter: simply adds a note to the meta-data
-def pyfunc_filter(data):
-    result = []
-    for item in make_list(data):
-        if not item.has_metadata():
-            meta = dict()
-        else:
-            meta = item.get_metadata()
-        meta[&quot;note&quot;] = &quot;filtered by a python function!&quot;
-        item.set_metadata(meta)
-        result.append(item)
-    return flatten_list(result)
-
-# writer: simply outputs name and meta-data and, if present, also the split
-def pyfunc_writer(data: AudioClassificationData, split: str = None):
-    if split is None:
-        print(&quot;name: &quot;, data.audio_name, &quot;, meta:&quot;, data.get_metadata())
-    else:
-        print(&quot;split:&quot;, split, &quot;, name:&quot;, data.audio_name, &quot;, meta:&quot;, data.get_metadata())
+<h2 id="sub-pipelines">Sub-pipelines<a class="headerlink" href="#sub-pipelines" title="Permanent link">#</a></h2>
+<p>With the <code>tee</code> meta-filter, it is possible to filter the audio files coming through with a separate
+sub-pipeline. E.g., converting the incoming data into multiple output formats with their own
+preprocessing.</p>
+<p>The following command loads the Festvox speech data and saves them in ADAMS and split 
+ADAMS format (after trimming silences) in one command:</p>
+<pre><code class="language-bash">adc-convert \
+  -l INFO \
+  from-festvox-sp \
+    -l INFO \
+    -i &quot;./festvox/*.txt&quot; \
+  tee \
+    -f &quot;to-adams-sp -o ./adams-tee/ -t transcript&quot; \
+  tee \
+    -f &quot;trim-silence to-adams-sp -o ./adams-split-tee/ -t transcript --split_names train val test --split_ratios 70 15 15&quot;
 </code></pre>
 
 
@@ -587,7 +618,7 @@ def pyfunc_writer(data: AudioClassificationData, split: str = None):
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../execution_control/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Execution control" rel="prev">
+        <a href="../placeholders/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Placeholders" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -596,20 +627,20 @@ def pyfunc_writer(data: AudioClassificationData, split: str = None):
               <span class="md-footer__direction">
                 Previous
               </span>
-              Execution control
+              Placeholders
             </div>
           </div>
         </a>
       
       
         
-        <a href="../multi/" class="md-footer__link md-footer__link--next" aria-label="Next: Multiple I/O" rel="next">
+        <a href="../pyfunc/" class="md-footer__link md-footer__link--next" aria-label="Next: External functions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Multiple I/O
+              External functions
             </div>
           </div>
           <div class="md-footer__button md-icon">

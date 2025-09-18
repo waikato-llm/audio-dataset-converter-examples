@@ -308,8 +308,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
-        Docker usage
+      <a href="../execution_control/" class="md-nav__link">
+        Execution control
       </a>
     </li>
   
@@ -377,25 +377,68 @@
     Multiple outputs
   </a>
   
-    <nav class="md-nav" aria-label="Multiple outputs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sub-pipelines" class="md-nav__link">
-    Sub-pipelines
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../email/" class="md-nav__link">
+        Email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_handling/" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        Temporary storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker usage
+      </a>
     </li>
   
 
@@ -519,19 +562,6 @@
     Multiple outputs
   </a>
   
-    <nav class="md-nav" aria-label="Multiple outputs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sub-pipelines" class="md-nav__link">
-    Sub-pipelines
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -595,22 +625,6 @@ converted to Festvox and CommonVoice format:</p>
     -w &quot;to-festvox-sp -l INFO -o {CWD}/output/festvox&quot; \
        &quot;to-commonvoice-sp -l INFO -o {CWD}/output/commonvoice&quot;
 </code></pre>
-<h3 id="sub-pipelines">Sub-pipelines<a class="headerlink" href="#sub-pipelines" title="Permanent link">#</a></h3>
-<p>With the <code>tee</code> meta-filter, it is possible to filter the audio files coming through with a separate
-sub-pipeline. E.g., converting the incoming data into multiple output formats with their own
-preprocessing.</p>
-<p>The following command loads the Festvox speech data and saves them in ADAMS and split 
-ADAMS format (after trimming silences) in one command:</p>
-<pre><code class="language-bash">adc-convert \
-  -l INFO \
-  from-festvox-sp \
-    -l INFO \
-    -i &quot;./festvox/*.txt&quot; \
-  tee \
-    -f &quot;to-adams-sp -o ./adams-tee/ -t transcript&quot; \
-  tee \
-    -f &quot;trim-silence to-adams-sp -o ./adams-split-tee/ -t transcript --split_names train val test --split_ratios 70 15 15&quot;
-</code></pre>
 
 
 
@@ -647,13 +661,13 @@ ADAMS format (after trimming silences) in one command:</p>
       
       
         
-        <a href="../faster_whisper/" class="md-footer__link md-footer__link--next" aria-label="Next: Faster whisper" rel="next">
+        <a href="../email/" class="md-footer__link md-footer__link--next" aria-label="Next: Email" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Faster whisper
+              Email
             </div>
           </div>
           <div class="md-footer__button md-icon">

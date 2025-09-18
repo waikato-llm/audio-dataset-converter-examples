@@ -2,57 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/audio_classification/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/docker/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/email/</loc>
+         <lastmod>2025-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/execution_control/</loc>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/faster_whisper/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/file_handling/</loc>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/filters/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/multi/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/placeholders/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/pyfunc/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/redis/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/speech/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/storage/</loc>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://waikato-llm.github.io/audio-dataset-converter-examples/visualization/</loc>
-         <lastmod>2025-06-23</lastmod>
+         <lastmod>2025-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

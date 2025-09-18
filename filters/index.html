@@ -373,8 +373,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
-        Docker usage
+      <a href="../execution_control/" class="md-nav__link">
+        Execution control
       </a>
     </li>
   
@@ -403,6 +403,62 @@
     <li class="md-nav__item">
       <a href="../multi/" class="md-nav__link">
         Multiple I/O
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../email/" class="md-nav__link">
+        Email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_handling/" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        Temporary storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker usage
       </a>
     </li>
   
@@ -604,7 +660,9 @@
 <ul>
 <li><code>metadata</code> - allows comparisons on meta-data values and whether to keep or discard a record in case of a match</li>
 <li><code>metadata-from-name</code> - allows extraction of meta-data value from the audio file name via a regular expression</li>
-<li><code>split-records</code> - adds the field <code>split</code> to the meta-data of the record passing through, which can be acted on with other filters (or stored in the output)</li>
+<li><code>metadata-to-placeholder</code> - sets the specified placeholder using the data from the meta-data passing through</li>
+<li><code>set-metadata</code> - sets the meta-data key/value pair as data passes through, can make use of data passing through as well </li>
+<li><code>split-records</code> - adds a field to the meta-data (default: <code>split</code>) of the record passing through, which can be acted on with other filters (or stored in the output)</li>
 </ul>
 <p>Splitting records into train/test using a 50/50 split ratio:</p>
 <pre><code class="language-bash">sdc-convert -l INFO -b \
