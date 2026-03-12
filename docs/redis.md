@@ -19,7 +19,7 @@ docker run --rm \
     --net=host \
     -v `pwd`:/workspace \
     -v `pwd`/cache:/.cache \
-    -it public.aml-repo.cms.waikato.ac.nz:443/pytorch/python-faster-whisper:1.0.2_cpu \
+    -it waikatodatamining/python-faster-whisper:1.0.2_cpu \
     fw_predict_redis \
       --redis_in audio \
       --redis_out transcript \
