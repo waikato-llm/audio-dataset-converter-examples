@@ -16,7 +16,7 @@ On this website you can find examples and documentation for:
 * [Audio classification](audio_classification.md)
 * [Speech](speech.md)
 * [Filter usage](filters.md)
-* [Placeholders](placeholders.md)
+* [Variables](variables.md)
 * [Execution control](execution_control.md)
 * [External functions](pyfunc.md)
 * [Multiple I/O](multi.md)

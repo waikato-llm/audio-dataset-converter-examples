@@ -37,7 +37,7 @@ adc-convert -l INFO \
 
 * `metadata` - allows comparisons on meta-data values and whether to keep or discard a record in case of a match
 * `metadata-from-name` - allows extraction of meta-data value from the audio file name via a regular expression
-* `metadata-to-placeholder` - sets the specified placeholder using the data from the meta-data passing through
+* `metadata-to-variable` - sets the specified variable using the data from the meta-data passing through
 * `set-metadata` - sets the meta-data key/value pair as data passes through, can make use of data passing through as well 
 * `split-records` - adds a field to the meta-data (default: `split`) of the record passing through, which can be acted on with other filters (or stored in the output)
 
@@ -53,7 +53,7 @@ sdc-convert -l INFO -b \
   split-records \
     --split_names train test \
     --split_ratios 50 50 \
-  set-placeholder
+  set-variable
   to-data \
     -l INFO \
     -o ./output
