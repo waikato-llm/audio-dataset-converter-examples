@@ -32,3 +32,4 @@ Examples for the additional libraries:
 * [Phonemizer integration](phonemizer.md)
 * [Redis](redis.md)
 * [Visualization](visualization.md)
+* [WavMark watermarking](wavmark.md)
