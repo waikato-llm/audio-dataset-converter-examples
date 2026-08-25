@@ -25,7 +25,8 @@ adc-convert -l INFO \
 # Watermark detection
 
 The following checks whether the payload `42` is embedded as 16-bit payload 
-in the audio (`wavmark-BER` in meta-data should be `0.0`):
+in the audio (`wavmark-BER` in meta-data should be `0.0` for perfect match 
+and `100.0` for no match whatsoever):
 
 ```bash
 adc-convert -l INFO \
