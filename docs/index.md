@@ -27,6 +27,7 @@ On this website you can find examples and documentation for:
 
 Examples for the additional libraries:
 
+* [audioseal watermarking](audioseal.md)
 * [Faster whisper](faster_whisper.md)
 * [Goruut phonemizer](goruut.md)
 * [Phonemizer integration](phonemizer.md)
