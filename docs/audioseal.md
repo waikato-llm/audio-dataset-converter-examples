@@ -40,4 +40,6 @@ adc-convert -l INFO \
   get-metadata \
     -f audioseal-BER \
   console
+  console \
+    -f "df-audio-data -f \"{audio-name}: prob={metadata:audioseal-detect_prob} payload={metadata:audioseal-payload}\""
 ```

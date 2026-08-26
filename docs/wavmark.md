@@ -39,5 +39,6 @@ adc-convert -l INFO \
     -p "wmd-wavmark -l INFO -p 42" \
   get-metadata \
     -f wavmark-BER \
-  console
+  console \
+    -f "df-audio-data -f \"{audio-name}: BER={metadata:wavmark-BER} payload={metadata:wavmark-payload}\""
 ```
